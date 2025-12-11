@@ -1,0 +1,16 @@
+# Abaikan file API Key
+api_key.txt
+
+# Abaikan folder virtual environment (ukurannya besar & tidak perlu di-upload)
+venv/
+.env
+
+# Abaikan file cache python
+__pycache__/
+*.pyc
+
+# (Opsional) Abaikan file database JSON kalau ukurannya raksasa
+knowledge_base.json
+
+.csv
+.log
