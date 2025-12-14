@@ -1,4 +1,4 @@
-# YUKI RAG API (Retrieval-Augmented Generation)
+# YUKI BOT WITH RAG API (Retrieval-Augmented Generation)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/downloads/)
