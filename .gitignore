@@ -12,10 +12,4 @@ __pycache__/
 # (Opsional) Abaikan file database JSON kalau ukurannya raksasa
 knowledge_base.json
 
-.csv
-.log
-
-file.csv
-file.log
-
-.csv
+*.csv
