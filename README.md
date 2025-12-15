@@ -8,6 +8,8 @@ Yuki RAG API adalah sistem *chatbot* canggih yang dibangun menggunakan **FastAPI
 
 Proyek ini mengimplementasikan pola **Retrieval-Augmented Generation (RAG)**, di mana kemampuan generatif AI diperkuat oleh data kustom yang tersimpan dalam *database* lokal (`knowledge_base.json`).
 
+> 🚀 **Ingin langsung mulai?** Lihat [QUICK_START.md](QUICK_START.md) untuk panduan singkat!
+
 ## Fitur Kunci
 
 * **RAG Implementation:** Menjamin jawaban AI didukung oleh sumber data spesifik milik perusahaan/proyek.
