@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-1",
+    "title": "Contoh Data Pengetahuan 1",
+    "text": "Ini adalah contoh data pengetahuan pertama. Ganti dengan data Anda sendiri.",
+    "source": "example-source-1"
+  },
+  {
+    "id": "example-2",
+    "title": "Contoh Data Pengetahuan 2",
+    "text": "Ini adalah contoh data pengetahuan kedua. Anda dapat menambahkan lebih banyak entri sesuai kebutuhan.",
+    "source": "example-source-2"
+  }
+]
