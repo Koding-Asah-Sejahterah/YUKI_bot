@@ -3,6 +3,8 @@ api_key.txt
 
 # Abaikan folder virtual environment (ukurannya besar & tidak perlu di-upload)
 venv/
+test_venv/
+*_venv/
 .env
 
 # Abaikan file cache python
