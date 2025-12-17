@@ -1,16 +1,16 @@
-import os
 import json
-import requests
+import os
+from contextlib import asynccontextmanager
+from typing import Any, AsyncGenerator, Dict, List
 
 # BARU: Menggunakan aiofiles untuk pembacaan file asinkron
 import aiofiles
-from fastapi import FastAPI, HTTPException, Request, Depends
-from pydantic import BaseModel, Field
-from typing import List, Dict, Any, AsyncGenerator
-from contextlib import asynccontextmanager
+import requests
+from fastapi import Depends, FastAPI, HTTPException, Request
 from google import genai
 from google.genai import types
 from google.genai.errors import APIError
+from pydantic import BaseModel, Field
 
 # --- Konfigurasi File ---
 API_KEY_FILE = "api_key.txt"
@@ -50,7 +50,6 @@ class AnswerResponse(BaseModel):
 # --- Fungsi Lifespan (Mengelola Startup/Shutdown) ---
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
-
     global API_KEY, DATA_KNOWLEDGE
 
     # 1. Memuat API Key (Sinkron karena ukurannya kecil, TIDAK menggunakan aiofiles)
@@ -157,7 +156,7 @@ def retrieve_knowledge(
     return results[:top_k]
 
 
-async def generate_rag_answer(client: genai.Client, query: str, context: str) -> str:
+async def generate_rag_answer(client: genai.Client, query: str, context: str):
     # ... (Kode fungsi generate_rag_answer tetap sama)
     MODEL_NAME = "gemini-2.5-flash"
 
@@ -175,7 +174,7 @@ async def generate_rag_answer(client: genai.Client, query: str, context: str) ->
     )
 
     try:
-        response = await client.models.generate_content_async(
+        response = client.models.generate_content(
             model=MODEL_NAME,
             contents=prompt,
             config=types.GenerateContentConfig(system_instruction=system_instruction),
